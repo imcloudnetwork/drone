@@ -23,24 +23,4 @@ pipeline:
 
  
   
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-       - name: APIsec Scan
-         uses: apisec-inc/apisec-run-scan@v1.0.5
-         with:
-          # The APIsec username with which the scans will be executed
-          apisec-username: ${{ secrets.apisec_username }}
-          # The Password of the APIsec user with which the scans will be executed
-          apisec-password: ${{ secrets.apisec_password}}
-          # The id of the scan job to run
-          apisec-scan-job: "8a8094e27bce7d6d017bcefa39426017"
-          # The location the scan will be executed in
-          apisec-region: "US_WEST_1"
-          # The id of the environment to run
-          apisec-environment: "8a8094e27bce7d6d017bcefa243d5e44"
-          # The id of the project for security scan
-          apisec-project: "8a8094e27bce7d6d017bcefa24355e41"
+   
