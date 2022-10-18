@@ -1,26 +1,20 @@
-pipeline:
-  build:
-    image: golang:latest
-    pull: true
-    commands:
-      - go get
-      - go build
-      - go test
-
-  frontend:
-    image: node:6
-    commands:
-      - npm install
-      - npm test
-
-  notify:
-    image: plugins/docker
-    channel: developers
-    username: drone
-    
-    
-
-
- 
+kind: pipeline
+name: Build
+trigger:
+  event:
+  - push
+steps: 
+- name: Drone
+  image: ubuntu:latest
+  environment:
+    PASSWORD:
+      from_secret: password
+    USERNAME:
+      from_secret: username
+  commands:
+  - ls
+  - apt-get update 
+  - apt-get install -y wget jq curl
+  - wget https://raw.githubusercontent.com/apisec-inc/apisec-scripts/master/dev_job_invoke_script.sh?token=AVOLEQ4FVVPJJ3DPAME4JELBS56SI -O dev_job_invoke_script.sh;bash dev_job_invoke_script.sh --host https://developer.apisec.ai --username {Username} --password {Password} --project "HMAC" --profile Master --scanner Super_1 --emailReport true --reportType RUN_SUMMARY
   
    
