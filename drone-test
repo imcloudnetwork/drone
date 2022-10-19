@@ -8,12 +8,22 @@ steps:
   commands:
   - echo "It worked!"
   
-  
-  steps:
-  - name: webhook
-+   image: acme/webhook
-    settings:
-      url: http://hook.acme.com
-      method: post
-      body: |
-        hello world
+ steps:
+ - name: webhook
+   image: acme/webhook
+   settings:
+     url: http://hook.acme.com
+     method: post
+     body: |
+       hello world
+
+steps:
+- name: download
+  type: Plugin
+  identifier: download
+ spec:
+  connectorRef: dockerhub
+  image: plugins/download
+ settings:
+  source: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+  destination: awscli.zip
