@@ -7,3 +7,13 @@ steps:
   image: alpine
   commands:
   - echo "It worked!"
+  
+  
+  steps:
+  - name: webhook
++   image: acme/webhook
+    settings:
+      url: http://hook.acme.com
+      method: post
+      body: |
+        hello world
