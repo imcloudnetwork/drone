@@ -3,9 +3,11 @@ name: drone-test
 type: docker
 
 steps:
-- name: deploy
+- name: Drone-Scan
   image: fxlabs/drone-deploy
   pull: always
+  commands: 
+    - docker run --name test -e "hostUrl=https://developer.apisec.ai"   -e "username=mohd@apisec.ai" -e "password=<password>" -e "projectName=<projectname>" -e "profile=Master" -e "scanner=Super_1" -e "email=true" -e "report=RUN_SUMMARY" apisec/drone-scan:latest
   settings:
      host: developer.apisec.ai
      username: root
