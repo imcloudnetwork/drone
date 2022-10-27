@@ -5,7 +5,7 @@ trigger:
   - push
 steps: 
 - name: Drone
-  image: ubuntu:latest
+  image: apisec/drone-scan:latest
   environment:
     PASSWORD:
       from_secret: apisec-password
