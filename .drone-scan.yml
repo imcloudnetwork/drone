@@ -8,7 +8,7 @@ steps:
   image: apisec/drone-scan:latest  
   environment:
      scanner: Super_1
-     email: false
+     email: true
      hostUrl: https://developer.apisec.ai
      projectName: HMAC
      profile: Master
