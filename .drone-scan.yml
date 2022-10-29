@@ -1,21 +1,40 @@
----
 kind: pipeline
 type: docker
 name: default
 
 steps:
-- name: APIsec scan trigger
-  image: apisec/drone-scan:latest  
-  environment:
-     scanner: Super_1
-     email: true
-     hostUrl: https://developer.apisec.ai
-     projectName: HMAC
-     profile: Master
-     report: RUN_SUMMARY
-     vulnerabilityFlag: true
-     password:
-       from_secret: password
-     username:
-       from_secret: username
-      
+  - name: APIsec scan trigger
+    image: apisec/drone-scan:latest
+    environment:
+       scanner: "Super_2"
+       email: true
+       hostUrl: https://developer.apisec.ai
+       projectName: "Test"
+       profile: "Master"
+       report: "RUN_SUMMARY"
+       vulnerabilityFlag: false
+       password:
+          from_secret: $❴❴ secrets.apisec_password ❵❵
+       username:
+          from_secret: $❴❴ secrets.apisec_username ❵❵
+
+---
+# kind: pipeline
+# type: docker
+# name: default
+
+# steps:
+# - name: APIsec scan trigger
+#   image: apisec/drone-scan:latest  
+#   environment:
+#      scanner: Super_1
+#      email: true
+#      hostUrl: https://developer.apisec.ai
+#      projectName: HMAC
+#      profile: Master
+#      report: RUN_SUMMARY
+#      vulnerabilityFlag: true
+#      password:
+#        from_secret: password
+#      username:
+#        from_secret: username
