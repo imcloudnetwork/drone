@@ -12,7 +12,7 @@ steps:
        projectName: "Test"
        profile: "Master"
        report: "RUN_SUMMARY"
-       vulnerabilityFlag: false
+       vulnerabilityFlag: true
        password:
           from_secret: $❴❴ secrets.apisec_password ❵❵
        username:
