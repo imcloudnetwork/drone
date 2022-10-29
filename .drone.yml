@@ -14,7 +14,7 @@ steps:
      profile: Master
      report: RUN_SUMMARY
      vulnerabilityFlag: false
-     secrets_apisec_password:
-        from_secret: secrets_apisec_password
-     secrets_apisec_username:
-        from_secret: secrets_apisec_username
+     apisec_password:
+        from_secret: apisec_password
+     apisec_username:
+        from_secret: apisec_username
