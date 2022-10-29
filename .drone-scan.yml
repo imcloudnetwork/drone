@@ -15,6 +15,6 @@ steps:
      report: RUN_SUMMARY
      vulnerabilityFlag: true
      password:
-        from_secret: $❴❴ secrets.apisec_password ❵❵
+        from_secret: password
      username:
-        from_secret: $❴❴ secrets.apisec_username ❵❵
+        from_secret: username
