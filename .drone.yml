@@ -15,6 +15,6 @@ steps:
      report: RUN_SUMMARY
      vulnerabilityFlag: false
      password:
-        from_secret: password
+        from_secret: PASSWORD
      username:
-        from_secret: username
+        from_secret: USERNAME
