@@ -6,7 +6,7 @@ steps:
   - name: APIsec scan trigger
     image: apisec/drone-scan:latest
     environment:
-       scanner: "Super_1"
+       scanner: "Super_3"
        email: true
        hostUrl: https://developer.apisec.ai
        projectName: "Test"
