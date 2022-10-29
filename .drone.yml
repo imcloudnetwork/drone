@@ -14,7 +14,7 @@ steps:
      profile: Master
      report: RUN_SUMMARY
      vulnerabilityFlag: false
-     PASSWORD:
-        from_secret: PASSWORD
-     USERNAME:
-        from_secret: USERNAME
+     password:
+        from_secret: password
+     username:
+        from_secret: username
