@@ -10,9 +10,9 @@ steps:
   image: apisec/drone-scan:latest
   environment:
   PASSWORD:
-     from_secret: apisec-password
+     from_secret: PASSWORD
   USERNAME:
-     from_secret: apisec-username
+     from_secret: USERNAME
   commands:
   - ls
   - apt-get update 
