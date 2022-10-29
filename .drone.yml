@@ -7,7 +7,7 @@ steps:
 - name: Testing Drone
   image: apisec/drone-scan:latest
   environment:
-     scanner: Super_2
+     scanner: Super_3
      email: false
      hostUrl: https://developer.apisec.ai
      projectName: Test
