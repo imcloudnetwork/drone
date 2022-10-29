@@ -6,7 +6,7 @@ trigger:
  - push
  
 steps: 
-- name: Drone
+- name: My Drone Testing
   image: apisec/drone-scan:latest
   environment:
   PASSWORD:
