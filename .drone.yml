@@ -13,7 +13,7 @@ steps:
      projectName: Test
      profile: Master
      report: RUN_SUMMARY
-     vulnerabilityFlag: false
+     fail-on-high-vulns: false
      password:
         from_secret: apisec_password
      username:
