@@ -15,6 +15,6 @@ steps:
      report: RUN_SUMMARY
      vulnerabilityFlag: false
      password:
-        from_secret: password
+        from_secret: apisec_password
      username:
-        from_secret: username
+        from_secret: apisec_username
