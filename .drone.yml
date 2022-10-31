@@ -8,12 +8,12 @@ steps:
   image: apisec/drone-scan:latest
   environment:
      scanner: Super_3
-     email: true
+     email: false
      hostUrl: https://developer.apisec.ai
      projectName: Test
      profile: Master
      report: RUN_SUMMARY
-     fail-on-high-vulns: false
+     fail-on-high-vulns: true
      password:
         from_secret: apisec_password
      username:
